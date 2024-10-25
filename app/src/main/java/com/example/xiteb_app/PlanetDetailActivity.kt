@@ -10,21 +10,21 @@ class PlanetDetailActivity : AppCompatActivity() {
         setContentView(R.layout.activity_planet_detail)
 
         // Retrieve planet details from intent extras
-        val name = intent.getStringExtra("name")
-        val orbitalPeriod = intent.getStringExtra("orbital_period")
-        val gravity = intent.getStringExtra("gravity")
-        val climate = intent.getStringExtra("climate")
+        val name = intent.getStringExtra("name") ?: "Unknown"
+        val orbitalPeriod = intent.getStringExtra("orbital_period") ?: "Unknown"
+        val gravity = intent.getStringExtra("gravity") ?: "Unknown"
+        val climate = intent.getStringExtra("climate") ?: "Unknown"
 
         // Get references to the TextViews in the layout
-        val tvName: TextView = findViewById(R.id.tvName)
-        val tvOrbitalPeriod: TextView = findViewById(R.id.tvOrbitalPeriod)
-        val tvGravity: TextView = findViewById(R.id.tvGravity)
-        val tvClimate: TextView = findViewById(R.id.tvClimate) // New climate TextView
+        val tvName: TextView? = findViewById(R.id.tvName)
+        val tvOrbitalPeriod: TextView? = findViewById(R.id.tvOrbitalPeriod)
+        val tvGravity: TextView? = findViewById(R.id.tvGravity)
+        val tvClimate: TextView? = findViewById(R.id.tvClimate) // New climate TextView
 
-        // Display the planet details in the respective TextViews
-        tvName.text = "Name: $name"
-        tvOrbitalPeriod.text = "Orbital Period: $orbitalPeriod"
-        tvGravity.text = "Gravity: $gravity"
-        tvClimate.text = "Climate: $climate" // Display climate
+        // Safely display the planet details in the respective TextViews
+        tvName?.text = "Name: $name"
+        tvOrbitalPeriod?.text = "Orbital Period: $orbitalPeriod"
+        tvGravity?.text = "Gravity: $gravity"
+        tvClimate?.text = "Climate: $climate" // Display climate
     }
 }
