@@ -1,31 +1,46 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- res/layout/activity_planet_detail.xml -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"> <!-- Padding around the content -->
 
-    <!-- Planet Name -->
-    <TextView
-        android:id="@+id/tvName"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+        android:orientation="vertical">
 
-    <!-- Orbital Period -->
-    <TextView
-        android:id="@+id/tvOrbitalPeriod"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:textSize="18sp" />
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textSize="20dp"
+            android:layout_marginTop="20dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" /> <!-- Standard text appearance -->
 
-    <!-- Gravity -->
-    <TextView
-        android:id="@+id/tvGravity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:textSize="18sp" />
-</LinearLayout>
+        <TextView
+            android:id="@+id/tvOrbitalPeriod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Orbital Period"
+            android:layout_marginTop="10dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" /> <!-- Standard text appearance -->
+
+        <TextView
+            android:id="@+id/tvGravity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gravity"
+            android:layout_marginTop="10dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" /> <!-- Standard text appearance -->
+
+        <TextView
+            android:id="@+id/tvClimate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Climate"
+            android:layout_marginTop="10dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" /> <!-- Standard text appearance -->
+
+    </LinearLayout>
+</ScrollView>
